@@ -53,11 +53,11 @@ done
 }
 
 setup_app(){
+  wget https://artifactory.bare.appdynamics.com/artifactory/e2e-automation/apmpython/testAppsPython/TornadoMysqlApp/tormysql.tar
+  tar -xjvf tormysql.tar
   echo "Entering app set up"
   apt-get update
-  apt-get install python3-dev default-libmysqlclient-dev build-essential -y
-ls
-pwd  
+  apt-get install libpython3.11-dev default-libmysqlclient-dev build-essential -y
 cd tormysql
 rm -rf alembic
 rm alembic.ini
@@ -77,6 +77,6 @@ set +x;
 print_env
 print_config
 verify_artifact
-download_artifact
+# download_artifact
 setup_app
 start_agent
