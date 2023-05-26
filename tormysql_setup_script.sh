@@ -53,7 +53,7 @@ done
 }
 
 setup_app(){
-  wget https://artifactory.bare.appdynamics.com/artifactory/e2e-automation/apmpython/testAppsPython/TornadoMysqlApp/tormysql.tar
+  wget https://github.com/saikiran366/Artifacts/raw/python_artifacts/tormysql.tar
   tar -xjvf tormysql.tar
   echo "Entering app set up"
   apt-get update
